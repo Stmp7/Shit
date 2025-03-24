@@ -1,13 +1,42 @@
-.note-head {
-  transition: stroke 0.2s ease;
+.note {
+  cursor: pointer;
+  transition: transform 0.1s ease;
 }
 
-.note-head.played {
-  animation: pulse 0.3s ease;
+.note:hover {
+  transform: scale(1.1);
+}
+
+.note-head {
+  fill: #4B4B4B;
+  stroke: #4B4B4B;
+  stroke-width: 2;
+  transition: fill 0.3s ease;
 }
 
 .note-stem {
-  transition: stroke 0.2s ease;
+  stroke: #4B4B4B;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.note-line {
+  stroke: #4B4B4B;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+.note.played .note-head {
+  fill: #58cc02;
+  stroke: #58cc02;
+}
+
+.note.played .note-stem {
+  stroke: #58cc02;
+}
+
+.note.played .note-line {
+  stroke: #58cc02;
 }
 
 .note-label {
