@@ -1,0 +1,79 @@
+.piano {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.piano-keys {
+  display: flex;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.key {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 8px;
+  user-select: none;
+  transition: background-color 0.1s;
+}
+
+.key.white {
+  width: 60px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+  margin: 0 2px;
+}
+
+.key.black {
+  width: 40px;
+  height: 120px;
+  background-color: #333;
+  margin: 0 -20px;
+  z-index: 1;
+  border-radius: 0 0 4px 4px;
+}
+
+.key.white:hover {
+  background-color: #f0f0f0;
+}
+
+.key.black:hover {
+  background-color: #444;
+}
+
+.key:active {
+  transform: translateY(2px);
+}
+
+.key.active {
+  background-color: #4CAF50;
+}
+
+.key.black.active {
+  background-color: #2E7D32;
+}
+
+.note-label {
+  font-size: 12px;
+  color: #666;
+}
+
+.key.black .note-label {
+  color: white;
+}
+
+.key.active .note-label {
+  color: white;
+} 

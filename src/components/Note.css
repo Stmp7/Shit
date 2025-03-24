@@ -1,0 +1,27 @@
+.note-head {
+  transition: stroke 0.2s ease;
+}
+
+.note-head.played {
+  animation: pulse 0.3s ease;
+}
+
+.note-stem {
+  transition: stroke 0.2s ease;
+}
+
+.note-label {
+  transition: fill 0.2s ease;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 

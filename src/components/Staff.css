@@ -1,0 +1,105 @@
+.staff-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.staff {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.staff-svg {
+  width: 100%;
+  height: 200px;
+  display: block;
+}
+
+.staff-line {
+  stroke: #333;
+  stroke-width: 1;
+}
+
+/* Adjust line positions to be evenly spaced */
+.line-1 { top: 20%; }
+.line-2 { top: 40%; }
+.line-3 { top: 60%; }
+.line-4 { top: 80%; }
+.line-5 { top: 100%; }
+
+.note-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 100px;
+}
+
+.note {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+}
+
+.note-head {
+  width: 16px;
+  height: 16px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid #000;
+}
+
+.note-stem {
+  width: 2px;
+  height: 35px;
+  background-color: #000;
+  position: absolute;
+  top: -15px;
+  left: 7px;
+}
+
+/* Position the notes in the center of the staff */
+.note {
+  top: 70%;
+}
+
+/* Add ledger line for middle C */
+.note-container::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #000;
+  top: 70%;
+  left: -2px;
+}
+
+.note-label {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666;
+  font-family: 'Times New Roman', serif;
+}
+
+/* Styles for played notes */
+.note.played .note-head {
+  background-color: #05C037;
+  border-color: #05C037;
+}
+
+.note.played .note-stem {
+  background-color: #05C037;
+} 
